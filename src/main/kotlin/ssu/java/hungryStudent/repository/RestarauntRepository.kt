@@ -1,10 +1,9 @@
 package ssu.java.hungryStudent.repository
 
 import org.springframework.stereotype.Repository
-import ssu.java.hungryStudent.model.database.DatabaseRestaraunt
-import ssu.java.hungryStudent.model.domain.Restaraunt
+import ssu.java.hungryStudent.model.Restaurant
 
 @Repository
-interface RestarauntRepository : AbstractRepository<DatabaseRestaraunt, Restaraunt> {
-    fun findAllByTitleAndTags(title: String, tags: List<String>): List<Restaraunt>
+interface RestarauntRepository : AbstractRepository<Restaurant> {
+    fun findAllByTitleAndTags(title: String, tags: List<String>): List<Restaurant>
 }
